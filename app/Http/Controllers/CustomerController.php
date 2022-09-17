@@ -16,6 +16,11 @@ class CustomerController extends Controller
         ->select('cu.id_customer','cu.name','cu.address','cu.phone_number','cu.updated_at','cu.created_at','ca.description')->get();
         return view('Customer.customer-list', compact('datos'));
     }
+    public function index2()
+    {
+        $customers = Customer::all(['id','name','address','phone_number']);
+        return response()->json($customers);
+    }
     public function create()
     {
         $datos = Category::all();
