@@ -72,6 +72,7 @@ class CustomerController extends Controller
                 'name' => 'required|max:13',
                 'address' => 'required|max:75',
                 'phone_number' => 'required|max:75',
+                'id_category' => 'required|max:75',
             ], [
                 'name.required' => 'El campo codigo no debe estar vacio.',
                 'address.required' => 'El campo nombre no debe estar vacio.',
